@@ -13,7 +13,8 @@ export function AnalyzePage() {
         <p className="hero-kicker">Open-source due diligence</p>
         <h1>Analyze a dependency before you adopt it.</h1>
         <p className="hero-copy">
-          Check maintenance, community and risk signals — not a magic score.
+          Paste a GitHub repository below. We show maintenance, community and
+          risk signals — not a score that pretends to decide for you.
         </p>
         <SearchForm
           value={query}

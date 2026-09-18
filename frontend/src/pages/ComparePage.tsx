@@ -22,7 +22,8 @@ export function ComparePage() {
         <p className="hero-kicker">Side by side</p>
         <h1>Compare dependencies</h1>
         <p className="hero-copy">
-          Same signals, two libraries. The decision stays with you.
+          Enter two GitHub repositories. You get the same facts next to each
+          other. The app does not pick a winner.
         </p>
         <CompareForm
           left={leftQuery}

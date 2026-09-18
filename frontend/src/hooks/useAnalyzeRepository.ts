@@ -18,7 +18,9 @@ export function useAnalyzeRepository() {
       const parsed = parseRepoInput(value);
       if (!parsed) {
         setAnalysis(null);
-        setError('Use owner/repo, for example django/django.');
+        setError(
+          'That is not a GitHub repository. Use owner/repo, for example django/django, or paste a GitHub URL.',
+        );
         return;
       }
 

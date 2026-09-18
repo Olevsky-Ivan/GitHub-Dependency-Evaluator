@@ -10,6 +10,14 @@ from github_api.evaluation import LEVEL_WARNING
 from github_api.evaluation import build_risk_signals
 
 
+class HealthViewTests(SimpleTestCase):
+    def test_health_endpoint_returns_ok(self):
+        response = self.client.get('/api/health/')
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {'status': 'ok'})
+
+
 class RiskSignalTests(SimpleTestCase):
     def test_archived_repository_is_high_risk(self):
         now = datetime.now(timezone.utc)

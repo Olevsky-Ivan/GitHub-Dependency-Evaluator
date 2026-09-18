@@ -20,20 +20,25 @@ export function SearchForm({
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
-      <label className="sr-only" htmlFor="repo-query">
-        Repository
-      </label>
-      <input
-        id="repo-query"
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        placeholder="django/django"
-        autoComplete="off"
-        spellCheck={false}
-      />
+      <div className="field">
+        <label htmlFor="repo-query">GitHub repository</label>
+        <input
+          id="repo-query"
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          placeholder="django/django"
+          autoComplete="off"
+          spellCheck={false}
+        />
+      </div>
       <button type="submit" disabled={isLoading}>
         {isLoading ? 'Analyzing…' : 'Analyze'}
       </button>
+      <p className="field-hint">
+        Write it as <code>owner/repo</code> — that is the GitHub owner, a slash,
+        then the repository name. Example: <code>django/django</code>. You can
+        also paste the full GitHub URL.
+      </p>
     </form>
   );
 }

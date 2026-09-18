@@ -27,7 +27,9 @@ export function useCompareRepositories() {
 
       if (!left || !right) {
         setComparison(null);
-        setError('Enter two repositories as owner/repo.');
+        setError(
+          'Both fields need a GitHub repository as owner/repo, for example django/django and pallets/flask.',
+        );
         return;
       }
 
